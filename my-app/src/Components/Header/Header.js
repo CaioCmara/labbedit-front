@@ -1,10 +1,10 @@
 import { useLocation, useNavigate, useParams } from "react-router-dom";
-import logo from "../../img/labeddit-logo-header.png";
-import { goToHomePage, goToLoginPage } from "../../routes/coordinator";
-import { Container } from "./styled";
-import close from "../../img/close.png";
+ import { Container } from "./Style";
+import { goToHomePage, goToLoginPage } from "../../Router/Coordinator";
+ 
+ 
 
-export const Header = () => {
+ export const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const params = useParams();
@@ -20,7 +20,7 @@ export const Header = () => {
         return (
           <Container>
             <div>
-              <img src={logo} />
+             <h1>fdsff</h1>
             </div>
             <span>
               <h2>
@@ -33,7 +33,7 @@ export const Header = () => {
         return (
           <Container>
             <div>
-              <img src={logo} />
+              <img src={""} />
             </div>
             <span>
               <h2>
@@ -46,10 +46,10 @@ export const Header = () => {
         return (
           <Container>
             <div>
-              <img src={logo} />
+              <img src={""} />
             </div>
             <span>
-              <img src={close} onClick={() => goToHomePage(navigate)} />
+              <img src={""} onClick={() => goToHomePage(navigate)} />
             </span>
             <span>
               <h2>
@@ -62,3 +62,5 @@ export const Header = () => {
   };
   return <Container>{renderHeader()}</Container>;
 };
+
+ 
